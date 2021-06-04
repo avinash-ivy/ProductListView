@@ -29,6 +29,9 @@
 		AB1737B326661FB000CFB3BF /* DealsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1737B226661FB000CFB3BF /* DealsApiRequest.swift */; };
 		AB1737B62666308300CFB3BF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1737B52666308300CFB3BF /* DataService.swift */; };
 		AB1737C12666358700CFB3BF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1737C02666358700CFB3BF /* Router.swift */; };
+		AB1737CF2667036100CFB3BF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1737CD2667036100CFB3BF /* ImageCache.swift */; };
+		AB1737DF266863BA00CFB3BF /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1737DE266863BA00CFB3BF /* UIImageView+Extensions.swift */; };
+		AB64EBF1266A537F005538F6 /* jsonformatter.json in Resources */ = {isa = PBXBuildFile; fileRef = AB64EBF0266A537F005538F6 /* jsonformatter.json */; };
 		C5C0528B23886699002A586D /* Tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C0528723886616002A586D /* Tempo.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		AB1737B226661FB000CFB3BF /* DealsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsApiRequest.swift; sourceTree = "<group>"; };
 		AB1737B52666308300CFB3BF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AB1737C02666358700CFB3BF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AB1737CD2667036100CFB3BF /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Utility/ImageCache.swift; sourceTree = "<group>"; };
+		AB1737DE266863BA00CFB3BF /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		AB64EBF0266A537F005538F6 /* jsonformatter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonformatter.json; sourceTree = "<group>"; };
 		C5C0528723886616002A586D /* Tempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,7 @@
 				AB1737612664F9EF00CFB3BF /* Detail */,
 				5BEF080F1D663283006BF0C0 /* List */,
 				AB1737AA26660B0500CFB3BF /* Service */,
+				AB1737C82667019F00CFB3BF /* Utility */,
 				5B259CC91D6630E0001D755F /* AppDelegate.swift */,
 				5B259CD01D6630E0001D755F /* Assets.xcassets */,
 				5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */,
@@ -161,6 +168,7 @@
 				AB1737C52666769000CFB3BF /* Network */,
 				AB1737C42666765E00CFB3BF /* APIRequest */,
 				AB1737C32666762D00CFB3BF /* Encoding */,
+				AB1737E2266A52C700CFB3BF /* Mock */,
 				AB1737B52666308300CFB3BF /* DataService.swift */,
 			);
 			path = Service;
@@ -189,6 +197,23 @@
 				AB1737C02666358700CFB3BF /* Router.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		AB1737C82667019F00CFB3BF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AB1737CD2667036100CFB3BF /* ImageCache.swift */,
+				AB1737DE266863BA00CFB3BF /* UIImageView+Extensions.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		AB1737E2266A52C700CFB3BF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				AB64EBF0266A537F005538F6 /* jsonformatter.json */,
+			);
+			name = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */,
+				AB64EBF1266A537F005538F6 /* jsonformatter.json in Resources */,
 				AB1737A526652B4C00CFB3BF /* DetailView.xib in Resources */,
 				5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */,
 				5BEF08211D6635B2006BF0C0 /* ProductListView.xib in Resources */,
@@ -273,6 +299,8 @@
 				5BEF081F1D663598006BF0C0 /* ProductListView.swift in Sources */,
 				5B302A8F1D663A8500FA2FFD /* ProductListComponent.swift in Sources */,
 				5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */,
+				AB1737CF2667036100CFB3BF /* ImageCache.swift in Sources */,
+				AB1737DF266863BA00CFB3BF /* UIImageView+Extensions.swift in Sources */,
 				5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */,
 				5B2675A21D674B400015A238 /* ListEvents.swift in Sources */,
 				AB1737AC2666165500CFB3BF /* ApiRequestType.swift in Sources */,

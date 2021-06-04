@@ -32,5 +32,9 @@ class DetailPresenter: TempoPresenter {
         viewController.priceTag.text = viewState.price
         viewController.descriptionTextView.text = viewState.description
         viewController.image.image = viewState.image
+        
+        if let imageURL: String = viewState.imageURLString {
+            viewController.image.loadImage(with: imageURL)
+        }
     }
 }

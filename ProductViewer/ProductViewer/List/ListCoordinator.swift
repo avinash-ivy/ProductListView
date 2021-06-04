@@ -29,7 +29,7 @@ class ListCoordinator: TempoCoordinator {
     
     let dispatcher = Dispatcher()
     
-    let dataService = DataService()
+    let dataService = DataService(dataSource: .network)
     
     lazy var viewController: ListViewController = {
         return ListViewController.viewControllerFor(coordinator: self)

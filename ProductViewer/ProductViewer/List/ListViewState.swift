@@ -28,12 +28,16 @@ struct ListItemViewState: TempoViewStateItem, Equatable, Decodable {
     let imageURL: String?
         
     private enum RootKeys: String, CodingKey {
+// TODO: Uncomment and remove duplicates - Sample API used
         case identifier = "id"
+//        case identifier = "_id"
         case imageURL = "image_url"
+//        case imageURL = "image"
         case regular_price
         case title
         case aisle
         case description
+        case price
     }
     
     private enum PriceKeys: String, CodingKey {
@@ -47,6 +51,8 @@ struct ListItemViewState: TempoViewStateItem, Equatable, Decodable {
         title = try container.decode(String.self, forKey: .title)
         aisle = try container.decode(String.self, forKey: .aisle)
         description = try container.decode(String.self, forKey: .description)
+//        price = try container.decode(String.self, forKey: .price)
+        // TODO: Uncomment and remove duplicates - Sample API used
         let priceContainer = try container.nestedContainer(keyedBy: PriceKeys.self, forKey: .regular_price)
         price = try priceContainer.decode(String.self, forKey: .display_string)
     }

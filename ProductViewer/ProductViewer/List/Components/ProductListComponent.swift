@@ -17,8 +17,11 @@ struct ProductListComponent: Component {
     func configureView(_ view: ProductListView, item: ListItemViewState) {
         view.titleLabel.text = item.title
         view.priceLabel.text = item.price
-//        view.productImage.image = item.image
-        view.productImage.image = UIImage(named: "PlaceHolder")
+        
+        if let imageURL: String = item.imageURL {
+            view.productImage.loadImage(with: imageURL, placeholderImageName: "PlaceHolder")
+        }
+        view.aisleLabel.text = item.aisle
     }
     
     func selectView(_ view: ProductListView, item: ListItemViewState) {
@@ -28,6 +31,6 @@ struct ProductListComponent: Component {
 
 extension ProductListComponent: HarmonyLayoutComponent {
     func heightForLayout(_ layout: HarmonyLayout, item: TempoViewStateItem, width: CGFloat) -> CGFloat {
-        return 100.0
+        return 120.0
     }
 }

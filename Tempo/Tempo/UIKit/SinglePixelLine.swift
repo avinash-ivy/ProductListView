@@ -9,7 +9,7 @@ import UIKit
 
 open class SinglePixelLine: UIView {
     
-    open var color: UIColor = UIColor.gray {
+    open var color: UIColor = UIColor(white: 0.75, alpha: 1) {
         didSet {
             self.setNeedsDisplay()
         }

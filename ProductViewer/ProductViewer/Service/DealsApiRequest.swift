@@ -13,7 +13,9 @@ import Foundation
 
 struct DealsApiRequest: APIRequestType {
     var baseURL: URL {
+        // TODO: Uncomment and remove duplicates - Sample API used
         let urlString = "https://api.target.com/mobile_case_study_deals"
+//        let urlString = "https://target-deals.herokuapp.com"
         guard let url = URL(string: urlString) else {
             fatalError("Invalid URL for DealsApiRequest")
         }
@@ -22,6 +24,7 @@ struct DealsApiRequest: APIRequestType {
     
     var apiPath: String {
         return "/v1/deals"
+//        return "/api/deals"
     }
     
     var httpMethod: HTTPMethod {

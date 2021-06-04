@@ -36,5 +36,5 @@ extension UIImage {
     }
     
     @nonobjc
-    public static let clearImage = UIImage(named: "ClearPlaceholder")
+    public static let clearImage = UIImage(named: "PlaceHolder")
 }

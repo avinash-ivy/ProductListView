@@ -12,6 +12,7 @@ enum APIError: Error {
     case invalidDataError
     case codingError
     case invalidResponseCode
+    case mockDataSerializationError
 }
 
 protocol Router: class {

@@ -7,16 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9FD7787F-AB2B-436D-87DE-B9251C7ADEF1"
+            uuid = "A87B89CA-D457-49C6-8111-8CFB090D074A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ProductViewer/ProductViewer/Detail/DetailPresenter.swift"
+            filePath = "ProductViewer/ProductViewer/List/Components/ProductListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "present(_:)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "cornerRadius"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FC64552-94D1-460E-8DC6-A64CBF6AAD94"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductViewer/ProductViewer/List/Components/ProductListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "borderColor"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0D82CC5-D92F-4A54-9FFD-BE46FC4773F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductViewer/ProductViewer/Service/DataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "fetchData(onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
