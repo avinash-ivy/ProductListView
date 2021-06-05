@@ -1,6 +1,10 @@
 # ProductListView
 **Problem Statement:** To show a list of products and when clicked on a specific product, its details page to be shown.
 
+**How to run:** Open TargetCaseStudy.xcworkspace. Select ProductViewer target and desired iphone simulator. Click on Run button. In case you want to use mock data, you can change the arugement in below line of code to ```.mock```
+
+``` let dataService = DataService(dataSource: .network) ```
+
 **Architecture:** Tempo. 
 
 This architecture follows Unidirectional data flow model and makes it simple to update complex views.
