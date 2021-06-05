@@ -22,9 +22,7 @@ public enum Result<T> {
 struct Response<T>: Decodable where T:Decodable {
     // In API Request it is products, but it may vary
     // If we want to abstract it more, then we need to introduce model inaddition to viewstate
-    // TODO: Uncomment and remove duplicates - Sample API used
     private(set) var products: T?
-//    private(set) var data: T?
 }
 
 protocol Service {

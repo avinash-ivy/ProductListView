@@ -23,15 +23,12 @@ class DetailPresenter: TempoPresenter {
         
         self.viewController.listButton.backgroundColor = UIColor.targetStrokeGrayColor
         self.viewController.listButton.setTitleColor(UIColor.targetJetBlackColor, for: .normal)
-
     }
     
     // MARK: Functions
     public func present(_ viewState: DetailViewState) {
-//        viewController.image = viewState.imageURLString
         viewController.priceTag.text = viewState.price
         viewController.descriptionTextView.text = viewState.description
-        viewController.image.image = viewState.image
         
         if let imageURL: String = viewState.imageURLString {
             viewController.image.loadImage(with: imageURL)

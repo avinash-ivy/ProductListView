@@ -38,7 +38,6 @@ class ImageCache {
             }
             // Cache the image.
             self.cachedImages.setObject(image, forKey: url, cost: responseData.count)
-            // Iterate over each requestor for the image and pass it back.
             DispatchQueue.main.async {
                 completion(image)
             }

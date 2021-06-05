@@ -17,8 +17,6 @@ struct DetailViewState: TempoViewState {
     var imageURLString: String?
     let price: String
     let description: String
-    // Remove once not needed
-    var image: UIImage?
     
     // You can configure button state also here
         
