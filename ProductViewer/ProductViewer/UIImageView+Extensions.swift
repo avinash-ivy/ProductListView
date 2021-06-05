@@ -18,6 +18,7 @@ extension UIImageView {
             return
         }
                 
+        /*
         let placeholderImage: UIImage?
 
         if let placeholderImageName: String = placeholderImageName, let image: UIImage = UIImage(named: placeholderImageName) {
@@ -27,7 +28,8 @@ extension UIImageView {
             placeholderImage = UIImage.clearImage
         }
         
-//        self.image = placeholderImage
+        self.image = placeholderImage
+         */
 
         let loadingView: UIActivityIndicatorView = UIActivityIndicatorView()
 

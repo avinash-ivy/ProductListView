@@ -39,9 +39,5 @@ struct DetailViewState: TempoViewState {
         if let imageURLString = viewState.imageURL {
             self.imageURLString = imageURLString
         }
-        // Remove once not required
-//        if let image = viewState.image {
-//            self.image = image
-//        }
     }
 }

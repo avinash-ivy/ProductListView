@@ -52,13 +52,6 @@ class ListCoordinator: TempoCoordinator {
     // MARK: ListCoordinator
     
     fileprivate func registerListeners() {
-        /*
-        dispatcher.addObserver(ListItemPressed.self) { [weak self] e in
-            let alert = UIAlertController(title: "Item selected!", message: "🐶", preferredStyle: .alert)
-            alert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: nil) )
-            self?.viewController.present(alert, animated: true, completion: nil)
-        }
-         */
         dispatcher.addObserver(ListItemPressed.self) { [weak self] e in
             let detailCoordinator = DetailCoordinator.init(withListItemViewState: e.productItem)
             self?.viewController.navigationController?.pushViewController(detailCoordinator.viewController, animated: true)
@@ -66,26 +59,12 @@ class ListCoordinator: TempoCoordinator {
     }
     
     func updateState() {
-//        viewState.listItems = (1..<10).map { index in
-//            ListItemViewState(title: "Puppies!!!", price: "$9.99", image: UIImage(named: "\(index)"))
-//        }
-        
-//        viewState.listItems = (1..<10).map({ index in
-//            ListItemViewState.init(title: "non mollit veniam ex",
-//                                   price: "$184.06",
-//                                   image: UIImage(named: "PlaceHolder"),
-//                                   identifier: 0,
-//                                   aisle: "b2",
-//                                   description: "minim ad et minim ipsum duis irure pariatur deserunt eu cillum anim ipsum velit tempor eu pariatur sunt mollit tempor ut tempor exercitation occaecat ad et veniam et excepteur velit esse eu et ut ipsum consectetur aliquip do quis voluptate cupidatat eu ut consequat adipisicing occaecat adipisicing proident laborum laboris deserunt in laborum est anim ad non",
-//                                   imageURL: "https://picsum.photos/id/0/300/300")
-//        })
-        
-        dataService.fetchData { [weak self] (result: Result<[ListItemViewState]>) in
+        dataService.fetchData { [weak self] (result: Result<[ListModel]>) in
             guard let self = self else { return }
             switch result {
             case .success(let productsList):
                 if productsList.count > 0 {
-                    self.viewState.listItems = productsList
+                    self.viewState.listItems = self.listViewStateItems(fromListModels: productsList)
                 } else {
                     self.dispatcher.triggerEvent(EmptyList())
                 }
@@ -93,6 +72,18 @@ class ListCoordinator: TempoCoordinator {
                 self.dispatcher.triggerEvent(FetchError())
             }
         }
-        
+    }
+    
+    func listViewStateItems(fromListModels productModels: [ListModel]) -> [ListItemViewState] {
+        var listItemViewStates = [ListItemViewState]()
+        productModels.forEach { listModel in
+            let viewStateItem = ListItemViewState(title: listModel.title,
+                                                  price: listModel.price,
+                                                  aisle: listModel.aisle,
+                                                  imageURL: listModel.imageURL,
+                                                  description: listModel.description)
+            listItemViewStates.append(viewStateItem)
+        }
+        return listItemViewStates
     }
 }

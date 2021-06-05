@@ -11,8 +11,6 @@ import Tempo
 
 enum DataSourceType {
     case network
-    case disk
-    case db
     case mock
 }
 
@@ -44,8 +42,6 @@ struct DataService:Service {
             if let path = Bundle.main.path(forResource: "jsonformatter", ofType: "json") {
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                    //                      let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                    //                      if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let products = jsonResult["products"] as? [Any] {
                     let decodedResult = try JSONDecoder().decode(Response<T>.self, from: data)
                     if let decodedValue = decodedResult.products {
                         completionHandler(.success(decodedValue))
@@ -55,7 +51,7 @@ struct DataService:Service {
                     completionHandler(.failure(APIError.mockDataSerializationError))
                 }
             }
-        default:
+        case .network:
             router.request(withApiRequest: DealsApiRequest()) { data, response, error in
                 
                 if let validError = error {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// This model is not required as ListModel is having these attributes already. So not using
 struct DetailModel {
     let id: Int
     let title: String
